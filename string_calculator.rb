@@ -1,5 +1,13 @@
 class StringCalculator
-    def initialize(number)
-        @number = number
-    end
+  def initialize(numbers)
+      @numbers = numbers
+  end
+
+  def self.add(@number)
+
+  end
+
+  private
+
+  def extract_numbers(number_string)
 end
