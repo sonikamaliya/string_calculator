@@ -34,6 +34,7 @@ RSpec.describe StringCalculator do
 
     it 'raises an error while calling add with a negative number' do
       expect { subject.add("1,-2") }.to raise_error("Negative numbers not allowed: -2")
+      expect { subject.add("1,-2, -3") }.to raise_error("Negative numbers not allowed: -2, -3")
     end
   end
 end
