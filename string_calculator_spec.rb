@@ -22,5 +22,10 @@ RSpec.describe StringCalculator do
     it 'It adds two numbers' do
       expect(subject.add("1,2")).to eq(3)
     end
+
+    it 'It adds multiple given numbers' do
+      expect(subject.add("1,2,3")).to eq(6)
+      expect(subject.add("1,2,3,6")).to eq(12)
+    end
   end
 end
