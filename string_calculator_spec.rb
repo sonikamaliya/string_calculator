@@ -14,9 +14,13 @@ RSpec.describe StringCalculator do
       expect(subject.add("")).to eq(0)
     end
 
-    it 'returns the number for a single number string' do
+    it 'Returns the number itself for a single number string' do
       expect(subject.add("1")).to eq(1)
       expect(subject.add("5")).to eq(5)
+    end
+
+    it 'It adds two numbers' do
+      expect(subject.add("1,2")).to eq(3)
     end
   end
 end
