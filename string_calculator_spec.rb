@@ -31,5 +31,9 @@ RSpec.describe StringCalculator do
     it 'Allow the add method to handle new lines between numbers instead of commas' do
       expect(subject.add("1\n2,3")).to eq(6)
     end
+
+    it 'raises an error while calling add with a negative number' do
+      expect { subject.add("1,-2") }.to raise_error("Negative numbers not allowed: -2")
+    end
   end
 end
