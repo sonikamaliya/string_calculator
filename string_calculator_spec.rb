@@ -9,5 +9,9 @@ RSpec.describe StringCalculator do
     it "Initilize number string with add method" do 
       expect(StringCalculator.instance_methods).to include(:add)
     end
+
+    it 'For empty string it returns 0' do
+      expect(subject.add("")).to eq(0)
+    end
   end
 end
