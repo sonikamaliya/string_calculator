@@ -13,5 +13,10 @@ RSpec.describe StringCalculator do
     it 'For empty string it returns 0' do
       expect(subject.add("")).to eq(0)
     end
+
+    it 'returns the number for a single number string' do
+      expect(subject.add("1")).to eq(1)
+      expect(subject.add("5")).to eq(5)
+    end
   end
 end
