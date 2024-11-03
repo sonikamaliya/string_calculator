@@ -27,5 +27,9 @@ RSpec.describe StringCalculator do
       expect(subject.add("1,2,3")).to eq(6)
       expect(subject.add("1,2,3,6")).to eq(12)
     end
+
+    it 'Allow the add method to handle new lines between numbers instead of commas' do
+      expect(subject.add("1\n2,3")).to eq(6)
+    end
   end
 end
